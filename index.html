@@ -8,23 +8,46 @@
   <link rel="stylesheet" href="main.css">
   <script type="text/javascript" src="main.js"></script>
   <link rel="shortcut icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+  <main>
+    <h1>Binary, Decimal & Two Complement Converter</h1>
+
+    <img src="header.jpg"></img>
+
+    <h2>Binary</h2>
+    <p>Binary converter blabla</p>
+
+    <h2>Decimal</h2>
+    <p>Decimale getallen haha</p>
+
+    <h2>Two Complement</h2>
+    <p>two complement hahah</p>
+
+  </main>
+  <section class="container">
+
+
   <div class="decimalToBinary">
-    <p>Decimal > Binary</p>
-    <input type="number" id="toBinaryInput" />
-    <p id="binaryAnswer">00000000</p>
+    <p class="titleInGrid">Decimal > Binary</p>
+    <input type="number" id="toBinaryInput" placeholder="..."/>
+    <p class="resultText" id="binaryAnswer">00000000</p>
   </div>
   <div class="binaryToDecimal">
-    <p>Binary > Decimal</p>
-    <input type="number" id="toDecimalInput" />
-    <p id="decimalAnswer">00000000</p>
+    <p class="titleInGrid">Binary > Decimal</p>
+    <input type="number" id="toDecimalInput" placeholder="..."/>
+    <p class="resultText" id="decimalAnswer">0</p>
   </div>
   <div class="TwoComplement">
-    <p>Two Complement</p>
-    <input type="number" id="twoComplement" />
-    <p id="twoComplementAnswer">00000000</p>
+    <p class="titleInGrid">Two Complement</p>
+    <input type="number" id="twoComplement" placeholder="..."/>
+    <p class="resultText" id="twoComplementAnswer">00000000</p>
   </div>
 
+</section>
+<footer>
+  &copy; 2019 &mdash; Binary, Decimal & Two Complement Converter
+</footer>
 </body>
 </html>
