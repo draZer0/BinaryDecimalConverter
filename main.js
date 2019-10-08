@@ -3,18 +3,27 @@ window.onload = function() {
   let binaryInput = document.getElementById("toBinaryInput");
   let binaryString = ""
 
-  //let decimalInput = document.getElementById("toDecimalInput");
-  //let decimalString = ""
+  let decimalInput = document.getElementById("toDecimalInput");
+  let decimalString = ""
+
+  var binGetal = document.getElementById("forminputBinair");
+  var outputDecimal = document.getElementById('b2selfBinair');
+  var button2 = document.getElementById('toDecimal2');
 
   binaryInput.onkeyup = function(event){
     toBinary(this.value);
     binaryString = "";
   }
 
-  //decimalInput.onkeyup = function(event){
-  //  toDecimal(this.value);
-  //  decimalString = "";
-//  }
+  decimalInput.onkeyup = function(event){
+    toDecimal(this.value);
+    decimalString = "";
+  }
+
+  button2.onclick = function(){
+    binaryString = toDecimal(binGetal);
+    outputDecimal.value = binaryString;
+  }
 
   const toBinary = (binaryInput) => {
       if (binaryInput >= 128) {
@@ -77,9 +86,50 @@ window.onload = function() {
       document.getElementById("binaryAnswer").innerHTML = binaryString;
     }
 
+    const toDecimal = (inputgetral) => {
+
+      inputgetral = inputgetral.value;
+
+      //inputgetral = 0011;
+
+
+
+        let number = 0;
+        let result = [];
+        result = inputgetral.split("");
+
+        //result[] = [0,0,1,1];
+
+        let j = 0;
+
+        for(i = result.length - 1; i >= 0; i--) {
+
+          if(result[i] == 1){
+            result[i] = result[i] * Math.pow(2,j);
+          }else{
+             result[i] =  result[i] * Math.pow(2,j);
+          }
+          j++;
+        }
+
+        //result[] = [0,0,2,1];
+
+
+
+
+        for (var i = 0; i < result.length; i++) {
+         number +=  result[i];
+        }
+
+        //number = 3;
+
+        return number;
+
+
+    }
+
+}
     //const toDecimal = (decimalInput) => {
       //console.log( parseInt((decimalInput + '').replace(/[^01]/gi, ''), 2));
-
-      //document.getElementById("decimalAnswer").innerHTML = decimalString;
+        //document.getElementById("decimalAnswer").innerHTML = decimalString;
       //}
-}
