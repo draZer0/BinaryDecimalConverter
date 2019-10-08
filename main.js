@@ -6,23 +6,14 @@ window.onload = function() {
   let decimalInput = document.getElementById("toDecimalInput");
   let decimalString = ""
 
-  var binGetal = document.getElementById("forminputBinair");
-  var outputDecimal = document.getElementById('b2selfBinair');
-  var button2 = document.getElementById('toDecimal2');
-
   binaryInput.onkeyup = function(event){
     toBinary(this.value);
     binaryString = "";
   }
 
   decimalInput.onkeyup = function(event){
-    toDecimal(this.value);
-    decimalString = "";
-  }
-
-  button2.onclick = function(){
-    binaryString = toDecimal(binGetal);
-    outputDecimal.value = binaryString;
+    decimalString = toDecimal(decimalInput);
+    document.getElementById("decimalAnswer").innerHTML = decimalString;
   }
 
   const toBinary = (binaryInput) => {
@@ -82,54 +73,30 @@ window.onload = function() {
       else {
         binaryString = binaryString + "0";
       }
-
       document.getElementById("binaryAnswer").innerHTML = binaryString;
     }
 
-    const toDecimal = (inputgetral) => {
+  const toDecimal = (decimalInput) => {
+      let number = 0;
+      let result = [];
+      let j = 0;
+      decimalInput = decimalInput.value;
+      result = decimalInput.split("");
 
-      inputgetral = inputgetral.value;
-
-      //inputgetral = 0011;
-
-
-
-        let number = 0;
-        let result = [];
-        result = inputgetral.split("");
-
-        //result[] = [0,0,1,1];
-
-        let j = 0;
-
-        for(i = result.length - 1; i >= 0; i--) {
-
-          if(result[i] == 1){
-            result[i] = result[i] * Math.pow(2,j);
-          }else{
-             result[i] =  result[i] * Math.pow(2,j);
-          }
-          j++;
+      for(i = result.length - 1; i >= 0; i--) {
+        if (result[i] == 1) {
+          result[i] = result[i] * Math.pow(2,j);
         }
-
-        //result[] = [0,0,2,1];
-
-
-
-
-        for (var i = 0; i < result.length; i++) {
-         number +=  result[i];
+        else {
+           result[i] =  result[i] * Math.pow(2,j);
         }
+        
+        j++;
+      }
 
-        //number = 3;
-
-        return number;
-
-
+      for (var i = 0; i < result.length; i++) {
+       number +=  result[i];
+      }
+      return number;
     }
-
 }
-    //const toDecimal = (decimalInput) => {
-      //console.log( parseInt((decimalInput + '').replace(/[^01]/gi, ''), 2));
-        //document.getElementById("decimalAnswer").innerHTML = decimalString;
-      //}
