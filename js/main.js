@@ -39,61 +39,66 @@ window.onload = function() {
       let binaryString = "";
       let array = [];
 
-      if (binaryInput >= 128) {
-        binaryString += "1";
-        binaryInput = binaryInput - 128;
+      if (binaryInput > 255) {
+        binaryString = "Ongeldige invoer";
       }
       else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 64) {
-        binaryString += "1";
-        binaryInput = binaryInput - 64;
-      }
-      else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 32) {
-        binaryString += "1";
-        binaryInput = binaryInput - 32;
-      }
-      else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 16) {
-        binaryString += "1";
-        binaryInput = binaryInput - 16;
-      }
-      else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 8) {
-        binaryString += "1";
-        binaryInput = binaryInput - 8;
-      }
-      else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 4) {
-        binaryString += "1";
-        binaryInput = binaryInput - 4;
-      }
-      else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 2) {
-        binaryString += "1";
-        binaryInput = binaryInput - 2;
-      }
-      else {
-        binaryString = binaryString + "0";
-      }
-      if (binaryInput >= 1) {
-        binaryString += "1";
-        binaryInput = binaryInput - 1;
-      }
-      else {
-        binaryString = binaryString + "0";
+        if (binaryInput >= 128) {
+          binaryString += "1";
+          binaryInput = binaryInput - 128;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 64) {
+          binaryString += "1";
+          binaryInput = binaryInput - 64;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 32) {
+          binaryString += "1";
+          binaryInput = binaryInput - 32;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 16) {
+          binaryString += "1";
+          binaryInput = binaryInput - 16;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 8) {
+          binaryString += "1";
+          binaryInput = binaryInput - 8;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 4) {
+          binaryString += "1";
+          binaryInput = binaryInput - 4;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 2) {
+          binaryString += "1";
+          binaryInput = binaryInput - 2;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
+        if (binaryInput >= 1) {
+          binaryString += "1";
+          binaryInput = binaryInput - 1;
+        }
+        else {
+          binaryString = binaryString + "0";
+        }
       }
       document.getElementById("binaryAnswer").innerHTML = binaryString;
     }
