@@ -1,32 +1,30 @@
 @import 'reset';
 @import 'background';
 @import 'footer';
+@import 'input';
+
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-auto-flow: row;
-  margin: 1em auto;
-  max-width: 1200px;
+  grid-column-gap: 50px;
+  margin: 2em auto;
+  max-width: 1000px;
 }
 
 .decimalToBinary {
-  background: rgba(255, 255, 255, 0.9);
-  width: 250px;
-  height: 250px;
+  background: rgba(255, 255, 255, 1.0);
+  width: 475px;
+  height: 300px;
+  float: center;
 }
 
 .binaryToDecimal {
-  background: rgba(255, 255, 255, 0.9);
-  width: 250px;
-  height: 250px;
-}
-
-.TwoComplement {
-  background: rgba(255, 255, 255, 0.9);
-  width: 250px;
-  height: 250px;
+  background: rgba(255, 255, 255, 1.0);
+  width: 475px;
+  height: 300px;
 }
 
 img {
@@ -51,6 +49,7 @@ h2 {
 
 main {
   background-color: #fff;
+  box-sizing: border-box;
   margin: 2em auto;
   padding: 2em;
   max-width: 1000px;
@@ -60,8 +59,14 @@ main {
   font-size: 1.3em;
   text-align: center;
   font-weight: bold;
-  margin: 25px;
   margin-top: 25px;
+}
+
+.textInGrid {
+  font-size: 1em;
+  text-align: center;
+  margin: 16px;
+  color: #aaa;
 }
 
 .resultText {
@@ -70,19 +75,16 @@ main {
   margin: 25px;
 }
 
-input[type=number] {
-  display: block;
-  margin: 0 auto;
-  font-size: 1.5em;
-  width: 90%;
-  padding: 13px 18px;
-  box-sizing: border-box;
-  border: 3px solid #bbb;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 
-input[type=number]:focus {
-  border: 3px solid #3248a8;
+  .decimalToBinary {
+    width: 100%;
+  }
+
+  .binaryToDecimal {
+    width: 100%;
+  }
 }

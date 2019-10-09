@@ -1,0 +1,24 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5em;
+  width: 90%;
+  padding: 13px 18px;
+  box-sizing: border-box;
+  border: 3px solid #bbb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=number]:focus {
+  border: 3px solid #3248a8;
+}
+
+/*# sourceMappingURL=_input.css.map */

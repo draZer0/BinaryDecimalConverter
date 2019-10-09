@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("bg.jpg");
+  background-image: url("../img/bg.jpg");
+  line-height: 1.5em;
 }
 
 /*# sourceMappingURL=_background.css.map */

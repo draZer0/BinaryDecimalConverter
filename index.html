@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Binary, Decimal, Two Complement &mdash; Converter</title>
-  <link rel="stylesheet" href="main.css">
-  <script type="text/javascript" src="main.js"></script>
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-  <main>
-    <h1>Binary, Decimal & Two Complement Converter</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Binary &#60;&#62; Decimal Converter &mdash; Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
 
-    <img src="header.jpg"></img>
+    <main>
+      <h1>Binary &#60;&#62; Decimal Converter</h1>
 
-    <h2>Binary</h2>
-    <p>Binary converter blabla</p>
+      <img src="img/header.jpg"></img>
 
-    <h2>Decimal</h2>
-    <p>Decimale getallen haha</p>
+      <h2>Decimal &#62; Binary</h2>
+      <p>In het Decimal > Binary veld kunt u een getal invullen (tot een maximum van 255) om de vertaling van 8 bits terug te geven. Indien u een negatief getal invult krijgt u het negatieve equivalent van het decimale getal te zien (two complement).</p>
 
-    <h2>Two Complement</h2>
-    <p>two complement hahah</p>
+      <h2>Binary &#62; Decimal</h2>
+      <p>In het Binary > Decimal veld kunt u een binaire reeks invullen om het te vertalen naar een decimaal getal.</p>
 
-  </main>
-  <section class="container">
+    </main>
 
+    <section class="container">
 
-  <div class="decimalToBinary">
-    <p class="titleInGrid">Decimal > Binary</p>
-    <input type="number" id="toBinaryInput" placeholder="..."/>
-    <p class="resultText" id="binaryAnswer">00000000</p>
-  </div>
-  <div class="binaryToDecimal">
-    <p class="titleInGrid">Binary > Decimal</p>
-    <input type="number" id="toDecimalInput" placeholder="..."/>
-    <p class="resultText" id="decimalAnswer">0</p>
-  </div>
-  <div class="TwoComplement">
-    <p class="titleInGrid">Two Complement</p>
-    <input type="number" id="twoComplement" placeholder="..."/>
-    <p class="resultText" id="twoComplementAnswer">00000000</p>
-  </div>
+      <div class="decimalToBinary">
+        <p class="titleInGrid">Decimal &#62; Binary</p>
+        <p class="textInGrid">Vul een decimaal getal in om de binaire vertaling te krijgen.</p>
+        <input type="number" id="toBinaryInput" placeholder="..."/>
+        <p class="resultText" id="binaryAnswer">00000000</p>
+      </div>
 
-</section>
-<footer>
-  &copy; 2019 &mdash; Binary, Decimal & Two Complement Converter
-</footer>
-</body>
+      <div class="binaryToDecimal">
+        <p class="titleInGrid">Binary &#62; Decimal</p>
+        <p class="textInGrid">Vul een binair getal in om de decimale vertaling te krijgen.</p>
+        <input type="number" id="toDecimalInput" placeholder="..."/>
+        <p class="resultText" id="decimalAnswer">0</p>
+      </div>
+
+    </section>
+
+    <footer>
+      &copy; 2019 &mdash; Binary &#60;&#62; Decimal Converter
+    </footer>
+
+  </body>
 </html>
