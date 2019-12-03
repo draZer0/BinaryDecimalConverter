@@ -7,7 +7,7 @@ window.onload = function() {
   let decimalString = ""
 
   binaryInput.onkeyup = function(event){
-  // binaryInput.onkeyup = (event) => {
+  // const binaryInput.onkeyup = (event) => {
     if(binaryInput.value > 0){
       toBinary(this.value);
       binaryString = "";
@@ -24,7 +24,7 @@ window.onload = function() {
   }
 
   decimalInput.onkeyup = function(event){
-  // decimalInput.onkeyup = (event) => {
+  // const decimalInput.onkeyup = (event) => {
     if(decimalInput.value > 0) {
       decimalString = toDecimal(decimalInput);
       document.getElementById("decimalAnswer").innerHTML = decimalString;
@@ -142,6 +142,9 @@ window.onload = function() {
       let number = 0;
       let result = [];
       let j = 0;
+      // let number = 0;
+      // let result = [];
+      // let j = 0;
 
       decimalInput = decimalInput.value;
       result = decimalInput.split("");
